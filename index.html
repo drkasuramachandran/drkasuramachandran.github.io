@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramachandran Kasu, Ph.D. — Optical Systems Research Scientist</title>
+<meta name="description" content="Ramachandran Kasu, Ph.D. — optical systems research scientist specializing in biomedical optics, OCT, fiber-optic interferometry, Raman and light-sheet imaging, and photonics.">
+<meta property="og:title" content="Ramachandran Kasu, Ph.D. — Optical Systems Research Scientist">
+<meta property="og:description" content="Biomedical optics, OCT, fiber-optic interferometry, Raman and light-sheet imaging, photonics.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A1220">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A1220;
+    --ink-2:#101A2E;
+    --ink-3:#16213A;
+    --paper:#ECEFF6;
+    --paper-dim:#98A3BC;
+    --paper-dimmer:#6C7793;
+    --fiber:#5EEAD4;
+    --violet:#A78BFA;
+    --amber:#F2A93B;
+    --line:rgba(236,239,246,0.10);
+    --line-strong:rgba(236,239,246,0.18);
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    font-optical-sizing:auto;
+    font-weight:500;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  ::selection{background:var(--fiber); color:var(--ink);}
+
+  /* ---------- Nav ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(10,18,32,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+  }
+  .brand{
+    font-family:'Fraunces',serif; font-size:1.05rem; font-weight:600;
+    display:flex; align-items:center; gap:10px; text-decoration:none;
+  }
+  .brand-mark{
+    width:20px; height:20px; flex:none;
+  }
+  .navlinks{display:flex; gap:28px; list-style:none; margin:0; padding:0;}
+  .navlinks a{
+    text-decoration:none; font-size:0.88rem; color:var(--paper-dim);
+    letter-spacing:0.01em; transition:color .2s ease;
+  }
+  .navlinks a:hover{color:var(--fiber);}
+  .nav-toggle{display:none; background:none; border:0; color:var(--paper); font-size:1.4rem; cursor:pointer;}
+  @media (max-width:760px){
+    .navlinks{
+      position:fixed; inset:60px 0 auto 0; background:var(--ink-2);
+      flex-direction:column; padding:20px 28px; gap:16px;
+      border-bottom:1px solid var(--line-strong);
+      transform:translateY(-130%); transition:transform .28s ease;
+    }
+    .navlinks.open{transform:translateY(0);}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:96px 0 64px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-svg-wrap{
+    position:absolute; inset:0; z-index:0;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0.55;
+    mask-image:radial-gradient(ellipse 70% 70% at 50% 40%, black 40%, transparent 85%);
+  }
+  .hero-svg-wrap svg{width:120%; max-width:1400px; height:auto;}
+  .wave{fill:none; stroke-width:1; transform-origin:center;}
+  .wave-a{stroke:var(--fiber); opacity:0.5; animation:pulse-a 7s ease-in-out infinite;}
+  .wave-b{stroke:var(--violet); opacity:0.5; animation:pulse-b 7s ease-in-out infinite;}
+  @keyframes pulse-a{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.015); }
+  }
+  @keyframes pulse-b{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(0.985); }
+  }
+  .hero-inner{position:relative; z-index:1; display:grid; grid-template-columns:1.3fr 0.7fr; gap:56px; align-items:center;}
+  @media (max-width:860px){ .hero-inner{grid-template-columns:1fr;} }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:0.78rem; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--fiber); margin-bottom:18px; display:block;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem, 5.4vw, 4.1rem); line-height:1.03; color:var(--paper);
+  }
+  .hero h1 em{ font-style:italic; color:var(--fiber);}
+  .hero-lede{
+    margin-top:22px; font-size:1.12rem; color:var(--paper-dim); max-width:52ch;
+  }
+  .hero-ctas{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px; border-radius:2px; font-size:0.92rem; font-weight:500;
+    text-decoration:none; border:1px solid var(--line-strong); transition:all .2s ease;
+    cursor:pointer;
+  }
+  .btn-primary{ background:var(--fiber); color:var(--ink); border-color:var(--fiber);}
+  .btn-primary:hover{ background:#7FF2DE; }
+  .btn-ghost{ color:var(--paper); }
+  .btn-ghost:hover{ border-color:var(--fiber); color:var(--fiber);}
+
+  .portrait-frame{
+    position:relative; justify-self:end; width:min(320px, 100%);
+  }
+  .portrait-frame img{
+    width:100%; display:block; border-radius:3px;
+    filter:grayscale(0.15) contrast(1.05);
+    border:1px solid var(--line-strong);
+  }
+  .portrait-tag{
+    position:absolute; left:-14px; bottom:-14px;
+    background:var(--ink-2); border:1px solid var(--line-strong);
+    padding:10px 14px; font-family:'IBM Plex Mono',monospace; font-size:0.72rem;
+    color:var(--paper-dim); letter-spacing:0.03em;
+  }
+  .portrait-tag b{color:var(--fiber); font-weight:500;}
+
+  /* ---------- stat strip ---------- */
+  .stats{ border-bottom:1px solid var(--line); background:var(--ink-2); }
+  .stats .wrap{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+  }
+  @media (max-width:700px){ .stats .wrap{grid-template-columns:repeat(2,1fr);} }
+  .stat{
+    padding:26px 20px; border-right:1px solid var(--line);
+    text-align:left;
+  }
+  .stat:last-child{border-right:none;}
+  .stat b{
+    display:block; font-family:'Fraunces',serif; font-size:1.9rem; color:var(--fiber); font-weight:500;
+  }
+  .stat span{ font-size:0.82rem; color:var(--paper-dim); }
+
+  /* ---------- sections ---------- */
+  section{ padding:88px 0; border-bottom:1px solid var(--line); }
+  .section-head{ margin-bottom:44px; max-width:640px; }
+  .section-head .eyebrow{margin-bottom:12px;}
+  .section-head h2{ font-size:clamp(1.6rem,3vw,2.3rem); }
+  .section-head p{ color:var(--paper-dim); margin-top:14px; font-size:1.02rem; }
+
+  /* about */
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
+  @media (max-width:800px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid p{ color:var(--paper-dim); font-size:1.02rem; }
+  .about-grid p + p{ margin-top:16px; }
+  .pull{
+    border-left:2px solid var(--fiber); padding-left:20px; font-family:'Fraunces',serif;
+    font-size:1.3rem; color:var(--paper); font-weight:400; font-style:italic; line-height:1.45;
+  }
+
+  /* focus grid */
+  .focus-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  @media (max-width:860px){ .focus-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .focus-grid{grid-template-columns:1fr;} }
+  .focus-card{
+    background:var(--ink); padding:28px 24px; transition:background .2s ease;
+  }
+  .focus-card:hover{ background:var(--ink-2); }
+  .focus-card .fi{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--violet); letter-spacing:0.05em;}
+  .focus-card h3{ font-size:1.12rem; margin-top:10px; color:var(--paper); font-weight:500;}
+  .focus-card p{ color:var(--paper-dim); font-size:0.92rem; margin-top:10px; }
+
+  /* career beam */
+  .beam{ position:relative; }
+  .beam-line{
+    position:absolute; left:9px; top:6px; bottom:6px; width:1px;
+    background:linear-gradient(var(--fiber), var(--violet));
+    opacity:0.4;
+  }
+  .beam-item{ position:relative; padding-left:40px; padding-bottom:40px; }
+  .beam-item:last-child{ padding-bottom:0; }
+  .beam-dot{
+    position:absolute; left:0; top:4px; width:19px; height:19px; border-radius:50%;
+    background:var(--ink-2); border:1px solid var(--fiber);
+  }
+  .beam-item.current .beam-dot{ background:var(--fiber); box-shadow:0 0 0 4px rgba(94,234,212,0.15);}
+  .beam-row{
+    display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; align-items:baseline;
+  }
+  .beam-role{ font-size:1.15rem; font-weight:500; color:var(--paper); font-family:'Fraunces',serif;}
+  .beam-org{ color:var(--fiber); font-size:0.95rem; margin-top:2px;}
+  .beam-date{
+    font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--paper-dimmer); white-space:nowrap;
+  }
+  .beam-desc{ color:var(--paper-dim); font-size:0.94rem; margin-top:10px; max-width:66ch;}
+  .beam-loc{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--violet);
+    border:1px solid rgba(167,139,250,0.35); padding:2px 8px; border-radius:20px; margin-top:10px;
+  }
+
+  /* funding */
+  .fund-list{ display:grid; gap:1px; background:var(--line); border:1px solid var(--line);}
+  .fund-row{
+    display:grid; grid-template-columns:140px 1fr 130px; gap:20px; align-items:center;
+    background:var(--ink); padding:18px 22px;
+  }
+  @media (max-width:700px){ .fund-row{grid-template-columns:1fr; gap:6px;} }
+  .fund-row .agency{ font-family:'IBM Plex Mono',monospace; font-size:0.82rem; color:var(--fiber);}
+  .fund-row .desc{ color:var(--paper-dim); font-size:0.92rem;}
+  .fund-row .amount{ font-family:'Fraunces',serif; color:var(--amber); font-size:1.05rem; text-align:right;}
+  @media (max-width:700px){ .fund-row .amount{text-align:left;} }
+
+  /* publications */
+  .pub-featured{
+    border:1px solid var(--line-strong); padding:26px; margin-bottom:14px; background:var(--ink-2);
+    position:relative;
+  }
+  .pub-tag{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--ink); background:var(--amber); padding:3px 9px; margin-bottom:12px;
+  }
+  .pub-item{
+    padding:18px 0; border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns:64px 1fr; gap:18px;
+  }
+  .pub-item:last-child{border-bottom:none;}
+  .pub-year{ font-family:'IBM Plex Mono',monospace; color:var(--paper-dimmer); font-size:0.85rem; padding-top:2px;}
+  .pub-title{ color:var(--paper); font-size:0.98rem; line-height:1.5;}
+  .pub-meta{ color:var(--paper-dim); font-size:0.86rem; margin-top:5px;}
+  .pub-meta a{ color:var(--fiber); text-decoration:none; border-bottom:1px solid rgba(94,234,212,0.3);}
+  .pub-meta a:hover{ border-color:var(--fiber);}
+  #more-pubs{ display:none; }
+  #more-pubs.show{ display:block; }
+  .show-more{
+    margin-top:22px; background:none; border:1px solid var(--line-strong); color:var(--paper);
+    padding:11px 20px; font-family:'IBM Plex Mono',monospace; font-size:0.82rem; cursor:pointer;
+    display:inline-flex; align-items:center; gap:8px; transition:all .2s ease;
+  }
+  .show-more:hover{ border-color:var(--fiber); color:var(--fiber);}
+
+  /* recognition */
+  .rec-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  @media (max-width:800px){ .rec-grid{grid-template-columns:1fr;} }
+  .rec-list{ list-style:none; margin:0; padding:0;}
+  .rec-list li{
+    padding:14px 0; border-bottom:1px solid var(--line); display:flex; gap:14px; font-size:0.94rem; color:var(--paper-dim);
+  }
+  .rec-list li:last-child{border-bottom:none;}
+  .rec-list b{ color:var(--paper); font-weight:500;}
+  .rec-year{ font-family:'IBM Plex Mono',monospace; color:var(--paper-dimmer); font-size:0.78rem; white-space:nowrap;}
+  .chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+  .chip{
+    border:1px solid var(--line-strong); padding:8px 14px; font-size:0.85rem; color:var(--paper-dim);
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  /* teaching/mentoring */
+  .teach-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  @media (max-width:800px){ .teach-grid{grid-template-columns:1fr;} }
+  .teach-card{ border:1px solid var(--line); padding:26px;}
+  .teach-card h3{ font-size:1.05rem; color:var(--fiber); font-weight:500; margin-bottom:12px;}
+  .teach-card p, .teach-card li{ color:var(--paper-dim); font-size:0.94rem;}
+  .teach-card ul{ margin:8px 0 0; padding-left:18px;}
+  .teach-card li{ margin-bottom:6px;}
+
+  /* contact / footer */
+  footer.site{ padding:80px 0 40px; }
+  .contact-inner{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px;
+  }
+  @media (max-width:800px){ .contact-inner{grid-template-columns:1fr;} }
+  .contact-list{ list-style:none; margin:24px 0 0; padding:0; }
+  .contact-list li{ padding:12px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  .contact-list li span:first-child{ color:var(--paper-dimmer); font-family:'IBM Plex Mono',monospace; font-size:0.8rem;}
+  .contact-list a{ color:var(--fiber); text-decoration:none;}
+  .contact-list a:hover{ text-decoration:underline;}
+  .foot-bottom{
+    margin-top:60px; padding-top:24px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:0.8rem; color:var(--paper-dimmer);
+  }
+
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{ opacity:1; transform:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none">
+        <circle cx="8" cy="12" r="5.4" stroke="#5EEAD4" stroke-width="1.2"/>
+        <circle cx="16" cy="12" r="5.4" stroke="#A78BFA" stroke-width="1.2"/>
+      </svg>
+      Ramachandran&nbsp;Kasu
+    </a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#recognition">Recognition</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:1px solid var(--line); padding-bottom:0;">
+    <div class="hero-svg-wrap" aria-hidden="true">
+      <svg viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg">
+        <g style="mix-blend-mode:screen;">
+          <circle cx="300" cy="340" r="6" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="19" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="32" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="45" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="58" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="71" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="84" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="97" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="110" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="123" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="136" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="149" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="162" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="175" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="188" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="201" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="214" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="227" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="240" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="253" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="266" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="279" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="292" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="305" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="318" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="331" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="344" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="357" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="370" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="383" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="396" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="409" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="422" class="wave wave-a"/>
+      <circle cx="300" cy="340" r="435" class="wave wave-a"/><circle cx="900" cy="340" r="6" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="19" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="32" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="45" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="58" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="71" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="84" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="97" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="110" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="123" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="136" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="149" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="162" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="175" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="188" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="201" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="214" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="227" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="240" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="253" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="266" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="279" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="292" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="305" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="318" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="331" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="344" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="357" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="370" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="383" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="396" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="409" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="422" class="wave wave-b"/>
+      <circle cx="900" cy="340" r="435" class="wave wave-b"/>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">Optical Systems Research Scientist</span>
+        <h1>Turning coherent light into <em>measurement</em>.</h1>
+        <p class="hero-lede">Nine years designing interferometers, light-sheet microscopes, Raman platforms, and OCT systems — from physical modelling through fabrication, validation, and publication. Currently building biomedical optics and OCT research at EGIMT, Visakhapatnam, India.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#publications">View Publications</a>
+          <a class="btn btn-ghost" href="assets/Ramachandran_Kasu_CV.pdf" download>Download CV</a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+      <div class="portrait-frame">
+        <img src="assets/headshot.jpeg" alt="Portrait of Dr. Ramachandran Kasu" width="884" height="884">
+        <div class="portrait-tag">Assistant Professor<br><b>EGIMT · Visakhapatnam, India</b></div>
+      </div>
+    </div>
+    <div style="height:56px;"></div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="wrap">
+      <div class="stat"><b>9</b><span>Years in optical R&D</span></div>
+      <div class="stat"><b>5</b><span>Countries · India, US, South Korea</span></div>
+      <div class="stat"><b>25</b><span>Publications &amp; conference papers</span></div>
+      <div class="stat"><b>$700K+</b><span>Competitive research funding</span></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">About</span>
+        <h2>An instrument-builder's approach to optics</h2>
+      </div>
+      <div class="about-grid reveal">
+        <div>
+          <p>Ramachandran works across atomic, molecular, and optical physics to design and build imaging, sensing, and spectroscopy platforms — with a core strength in fiber-optic interferometry, Raman and fluorescence spectroscopy, and photon-efficient detection for low-light, photon-limited measurement.</p>
+          <p>His work runs end to end: physical modelling and optical design, through experimental implementation, validation, and data analysis. That range has carried him through federally and internationally funded programs across five countries, with a consistent record of peer-reviewed publication and patented technology.</p>
+        </div>
+        <div>
+          <p class="pull">"Motivated to advance practical optical instrumentation for biological imaging, precision sensing, atmospheric measurement, and space science through collaborative, experiment-driven research."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH FOCUS -->
+  <section id="research">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Research Focus</span>
+        <h2>Six threads, one optical bench</h2>
+        <p>Each area below has produced working hardware, not just simulation — instruments built, calibrated, and run in the lab.</p>
+      </div>
+      <div class="focus-grid reveal">
+        <div class="focus-card">
+          <span class="fi">01 / IMAGING</span>
+          <h3>Biomedical Optics &amp; OCT</h3>
+          <p>Optical coherence tomography concepts, proof-of-concept systems, and IP development for real-time biomedical imaging.</p>
+        </div>
+        <div class="focus-card">
+          <span class="fi">02 / MICROSCOPY</span>
+          <h3>Light-Sheet &amp; Raman Imaging</h3>
+          <p>Single-objective Airy light-sheet systems, video-rate Raman metabolic imaging, and photon-sparse fluorescence detection.</p>
+        </div>
+        <div class="focus-card">
+          <span class="fi">03 / SENSING</span>
+          <h3>Fiber-Optic Interferometry</h3>
+          <p>Concatenated Mach-Zehnder and Sagnac loop systems for EDFA gain flattening, current sensing, and spectral tailoring.</p>
+        </div>
+        <div class="focus-card">
+          <span class="fi">04 / METROLOGY</span>
+          <h3>Acousto-Optic &amp; Vibration Sensing</h3>
+          <p>Multi-beam heterodyne laser Doppler vibrometry and line-scan CMOS interferometry for defense-grade measurement.</p>
+        </div>
+        <div class="focus-card">
+          <span class="fi">05 / SPECTROSCOPY</span>
+          <h3>Terahertz &amp; Spectroscopic Imaging</h3>
+          <p>Off-axis THz digital holography and Raman/photoacoustic spectroscopy for materials and explosives characterization.</p>
+        </div>
+        <div class="focus-card">
+          <span class="fi">06 / COMPUTATION</span>
+          <h3>Photonics Simulation &amp; AI</h3>
+          <p>Ansys Lumerical, Tidy3D, and Luceda IPKISS modelling paired with machine learning for biomedical image analysis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER BEAM -->
+  <section id="career">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Career Path</span>
+        <h2>Five countries, one continuous line of instrumentation</h2>
+      </div>
+      <div class="beam reveal">
+        <div class="beam-line" aria-hidden="true"></div>
+
+        <div class="beam-item current">
+          <div class="beam-dot"></div>
+          <div class="beam-row">
+            <div>
+              <div class="beam-role">Assistant Professor</div>
+              <div class="beam-org">EGIMT — Department of Medical Technology</div>
+            </div>
+            <div class="beam-date">06/2026 — Present</div>
+          </div>
+          <p class="beam-desc">Developing OCT-based concepts and IP, teaching and mentoring in medical technology, and supervising student projects in machine learning, biomedical image analysis, and optical instrumentation.</p>
+          <span class="beam-loc">Visakhapatnam, India</span>
+        </div>
+
+        <div class="beam-item">
+          <div class="beam-dot"></div>
+          <div class="beam-row">
+            <div>
+              <div class="beam-role">Postdoctoral Fellow</div>
+              <div class="beam-org">Department of Physics, University of Idaho</div>
+            </div>
+            <div class="beam-date">02/2022 — 06/2025</div>
+          </div>
+          <p class="beam-desc">Built Raman/fluorescence and Airy light-sheet imaging setups; explored non-diffracting beams for ultrafast light-sheet microscopy. Published in PNAS and ACS Photonics; filed one US patent.</p>
+          <span class="beam-loc">Idaho, USA</span>
+        </div>
+
+        <div class="beam-item">
+          <div class="beam-dot"></div>
+          <div class="beam-row">
+            <div>
+              <div class="beam-role">Postdoctoral Research Associate</div>
+              <div class="beam-org">National Center for Physical Acoustics, University of Mississippi</div>
+            </div>
+            <div class="beam-date">08/2018 — 01/2022</div>
+          </div>
+          <p class="beam-desc">Developed a heterodyne interferometer and line-scan CMOS multibeam setup for membrane vibration measurement. Published in Applied Optics and Optics Letters.</p>
+          <span class="beam-loc">Mississippi, USA</span>
+        </div>
+
+        <div class="beam-item">
+          <div class="beam-dot"></div>
+          <div class="beam-row">
+            <div>
+              <div class="beam-role">Research Associate</div>
+              <div class="beam-org">Advanced Centre for Research in High Energy Materials, University of Hyderabad</div>
+            </div>
+            <div class="beam-date">08/2017 — 08/2018</div>
+          </div>
+          <p class="beam-desc">Studied charge transfer via Raman and pulsed photoacoustic spectroscopy; constructed an off-axis THz digital holography system for explosives characterization.</p>
+          <span class="beam-loc">Hyderabad, India</span>
+        </div>
+
+        <div class="beam-item">
+          <div class="beam-dot"></div>
+          <div class="beam-row">
+            <div>
+              <div class="beam-role">Assistant Professor</div>
+              <div class="beam-org">MGM College of Engineering and Technology</div>
+            </div>
+            <div class="beam-date">07/2015 — 07/2017</div>
+          </div>
+          <p class="beam-desc">Taught Engineering Physics (PH100) to undergraduates; led student cultural and technical fest coordination. Included a nine-month research leave.</p>
+          <span class="beam-loc">Kerala, India</span>
+        </div>
+
+        <div class="beam-item">
+          <div class="beam-dot"></div>
+          <div class="beam-row">
+            <div>
+              <div class="beam-role">Postdoctoral Researcher</div>
+              <div class="beam-org">Division of Mechanical Systems Engineering, Jeonbuk National University</div>
+            </div>
+            <div class="beam-date">07/2016 — 03/2017</div>
+          </div>
+          <p class="beam-desc">Built a polarization-based Michelson interferometer and digital holography system; developed MATLAB phase-extraction code using 2D FFT for dynamic spectro-ellipsometry.</p>
+          <span class="beam-loc">South Korea</span>
+        </div>
+
+        <div class="beam-item">
+          <div class="beam-dot"></div>
+          <div class="beam-row">
+            <div>
+              <div class="beam-role">Doctoral Researcher — Ph.D. in Physics (Fiber Optics)</div>
+              <div class="beam-org">IIITDM Kancheepuram</div>
+            </div>
+            <div class="beam-date">08/2010 — 05/2015</div>
+          </div>
+          <p class="beam-desc">Dissertation: "Spectral Tailoring through Concatenated All-Fibre Interferometers for Communication and Sensing Applications." Designed a concatenated Mach-Zehnder / fiber loop mirror system for EDFA gain flattening.</p>
+          <span class="beam-loc">Chennai, India</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDING -->
+  <section id="funding">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Funded Research</span>
+        <h2>$700,000+ across five agencies</h2>
+      </div>
+      <div class="fund-list reveal">
+        <div class="fund-row">
+          <span class="agency">DOE — USA</span>
+          <span class="desc">Advanced Microscopy Project — central role in imaging technology behind PNAS and ACS Photonics publications and a filed patent.</span>
+          <span class="amount">$300,000+</span>
+        </div>
+        <div class="fund-row">
+          <span class="agency">ONR — USA</span>
+          <span class="desc">Acousto-Optic Detection Systems — sensing technology for defense applications, transferred to contractors.</span>
+          <span class="amount">$200,000+</span>
+        </div>
+        <div class="fund-row">
+          <span class="agency">DRDO — India</span>
+          <span class="desc">Materials Characterization Project — terahertz imaging systems for explosive detection, adopted for operational use.</span>
+          <span class="amount">$100,000+</span>
+        </div>
+        <div class="fund-row">
+          <span class="agency">NRF — Korea</span>
+          <span class="desc">Precision Measurement Systems — industrial metrology research with commercial applications.</span>
+          <span class="amount">$50,000+</span>
+        </div>
+        <div class="fund-row">
+          <span class="agency">DST — India</span>
+          <span class="desc">Fiber Optic Sensors Project — doctoral research in fundamental fiber-optic sensing.</span>
+          <span class="amount">$50,000+</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Publications &amp; Patents</span>
+        <h2>1 patent · 12 peer-reviewed articles · 12 conference papers</h2>
+        <p>ORCID: <span class="mono">0000-0002-6774-5184</span></p>
+      </div>
+
+      <div class="reveal">
+        <div class="pub-featured">
+          <span class="pub-tag">Patent Pending</span>
+          <div class="pub-title">Ramachandran Kasu, H. Luo, D. Christodoulides, A. E. Vasdekis — <em>Single Objective Airy Light-Sheet Imaging (SOALSI) and method for using</em>, US Patent Pending No. 63/704,447, 2024.</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year mono">2025</div>
+          <div>
+            <div class="pub-title">Ramachandran Kasu, Haokun Luo, Shirley Luckhart, Demetrios Christodoulides, A. E. Vasdekis — "Single-Objective Airy Light-Sheet Imaging"</div>
+            <div class="pub-meta">ACS Photonics, 12(5), 2432–2439 · IF 6.5 (Q1) · <a href="https://doi.org/10.1021/acsphotonics.4c02078" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year mono">2023</div>
+          <div>
+            <div class="pub-title">Lochlann Dunn, Haokun Luo, Nava R. Subedi, Ramachandran Kasu, et al. — "Video-Rate Raman-Based Metabolic Imaging by Airy Light-Sheet Illumination and Photon-Sparse Detection"</div>
+            <div class="pub-meta">PNAS, 120(9), e2210037120 · IF 9.4 (Q1) · <a href="https://doi.org/10.1073/pnas.2210037120" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year mono">2023</div>
+          <div>
+            <div class="pub-title">V. Aranchuk, Ramachandran Kasu, Junrui Li, I. Aranchuk, C. Hickey — "Application of line-scan CMOS camera in multi-beam heterodyne differential laser Doppler vibration sensor"</div>
+            <div class="pub-meta">Optics Letters, 48(10), 2724–2727 · IF 3.6 (Q2) · <a href="https://doi.org/10.1364/OL.486630" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year mono">2022</div>
+          <div>
+            <div class="pub-title">V. Aranchuk, Ramachandran Kasu, Junrui Li, I. Aranchuk, C. Hickey — "Multi-beam heterodyne laser Doppler vibrometer based on a line-scan CMOS digital camera"</div>
+            <div class="pub-meta">Applied Optics, 61(20), 5876–5883 · IF 1.7 (Q3/Q2) · <a href="https://doi.org/10.1364/AO.461368" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year mono">2021</div>
+          <div>
+            <div class="pub-title">K. Ramachandran, Jitendra N. Acharyya, A. Kumari, A. K. Chaudhary — "Study of photo-induced charge transfer mechanism of PEDOT with nitro groups of RDX, HMX, and TNT explosives using Anti-Stokes and Stokes Raman lines ratios"</div>
+            <div class="pub-meta">Spectrochimica Acta Part A, 251, 119360 · IF 4.3 (Q1) · <a href="https://doi.org/10.1016/j.saa.2020.119360" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-year mono">2021</div>
+          <div>
+            <div class="pub-title">K. Ramachandran, Naveen Kumar — "Comparative spectral tuning and fluctuation analysis of all-fiber Mach-Zehnder interferometer and micro Mach-Zehnder interferometer"</div>
+            <div class="pub-meta">Journal of Optics, 23(11), 115702 · IF 2.0 (Q2) · <a href="https://doi.org/10.1088/2040-8986/ac24be" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="more-pubs" class="reveal">
+        <div class="pub-item">
+          <div class="pub-year mono">2017</div>
+          <div>
+            <div class="pub-title">K. Ramachandran, Daesuk Kim, Naveen Kumar — "Miniaturized MMZI concatenated FLM for gain equalization of ASE response of an EDFA"</div>
+            <div class="pub-meta">Optical Fiber Technology, 36, 95–198 · IF 2.6 (Q2) · <a href="https://doi.org/10.1016/j.yofte.2017.03.016" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2016</div>
+          <div>
+            <div class="pub-title">G. Narendran, K. Ramachandran, Naveen Kumar — "An inline sensing of coolant temperature inside a microchannel for applications in ultra-dense packed high-power electronics"</div>
+            <div class="pub-meta">Optik, 127(2), 871–875 · IF 3.1 (Q2) · <a href="https://doi.org/10.1016/j.ijleo.2015.10.183" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2015</div>
+          <div>
+            <div class="pub-title">K. Ramachandran, Naveen Kumar, Venkataraman Sahoo — "A Highly Accurate All-Fiber MMZI Current Sensor"</div>
+            <div class="pub-meta">IEEE Sensors Journal, 15, 1270–1274 · IF 4.3 (Q1/Q2) · <a href="https://doi.org/10.1109/JSEN.2014.2361837" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2014</div>
+          <div>
+            <div class="pub-title">Naveen Kumar, K. Ramachandran — "Dynamic Spectral Maneuvering by Fiber Sagnac Loop Filter"</div>
+            <div class="pub-meta">Optics and Laser Technology, 63, 144–147 · IF 4.6 (Q1/Q2) · <a href="https://doi.org/10.1016/j.optlastec.2014.04.012" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2013</div>
+          <div>
+            <div class="pub-title">Naveen Kumar, K. Ramachandran — "Mach–Zehnder interferometer concatenated fiber loop mirror based gain equalization filter for an EDFA"</div>
+            <div class="pub-meta">Optics Communications, 289, 92–96 · IF 2.2 (Q2) · <a href="https://doi.org/10.1016/j.optcom.2012.10.003" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2017</div>
+          <div>
+            <div class="pub-title">Thresiamma George, K. Ramachandran — "Third-Order Optical Nonlinearity of Au-Ag core-shell Nanoparticle at 532 nm"</div>
+            <div class="pub-meta">International Journal of Science and Research, 6(4), 245–251 · <a href="https://www.ijsr.net/archive/v6i4/ART20172283.pdf" target="_blank" rel="noopener">PDF</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2024</div>
+          <div>
+            <div class="pub-title">Haokun Luo, Ramachandran Kasu, Demetrios N. Christodoulides, Andreas E. Vasdekis — "Metabolic Imaging at Video Rates Using Raman with Airy Light-Sheet Illumination and Sparse Photon Detection"</div>
+            <div class="pub-meta">Genomic Science Program — Enabling Capabilities and Resources PI Meeting Proceedings, p. 76</div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2024</div>
+          <div>
+            <div class="pub-title">L. Dunn, H. Luo, N. R. Subedi, Ramachandran Kasu, et al. — "Video-rate Spontaneous Raman Imaging" (Invited)</div>
+            <div class="pub-meta">SPIE Photonics West, San Francisco, USA · <a href="https://doi.org/10.1117/12.3003021" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2017</div>
+          <div>
+            <div class="pub-title">Vamara Dembele, K. Ramachandran, Inho Choi, et al. — "Dynamic Spectro-ellipsometry Based on a Spectral Interferometric Phase Extraction Method"</div>
+            <div class="pub-meta">Digital Holography and 3D Imaging 2017, Jeju Island, South Korea · <a href="https://doi.org/10.1364/DH.2017.M4A.5" target="_blank" rel="noopener">DOI</a></div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2023</div>
+          <div>
+            <div class="pub-title">Ramachandran K, Andreas E. Vasdekis — "Light Sheet Microscopy in Idaho"</div>
+            <div class="pub-meta">Institute for Health in the Human Ecosystem Annual Research Symposium, Moscow, Idaho, USA</div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2017</div>
+          <div>
+            <div class="pub-title">A. Kumari, Ganesh Damarla, K. Ramachandran, Anil K. Chaudhary — "A Time-Domain Terahertz Spectroscopy of Cefixime Antibiotic Drug Obtained from Different Sources"</div>
+            <div class="pub-meta">DAE-BRNS Theme Meeting on Ultrafast Science 2017, University of Hyderabad, India</div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2016</div>
+          <div>
+            <div class="pub-title">Daesuk Kim, Vamara Dembele, Inho Choi, Ramachandran Kasu — "Dynamic Spectroscopic Ellipsometry: Theory and Applications" (Invited)</div>
+            <div class="pub-meta">International Symposium on Optomechatronic Technology 2016, Tokyo, Japan</div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year mono">2012–2014</div>
+          <div>
+            <div class="pub-title">Naveen Kumar, K. Ramachandran, et al. — Additional conference papers on EDFA gain flattening, tapered-fiber current sensing, and gain equalization</div>
+            <div class="pub-meta">WRAP 2013 (IIT Delhi) · PHOTONICS 2012 (IIT Madras) · ICOL 2014 (IRDE Dehradun) · 24th Korean Conference on Semiconductors (2017)</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="show-more" id="pubToggle" aria-expanded="false">Show all 25 publications ↓</button>
+    </div>
+  </section>
+
+  <!-- RECOGNITION -->
+  <section id="recognition">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Recognition &amp; Service</span>
+        <h2>Awards, memberships &amp; editorial service</h2>
+      </div>
+      <div class="rec-grid reveal">
+        <div>
+          <h3 style="font-size:1rem; color:var(--paper-dim); font-weight:500; margin-bottom:12px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.05em; font-size:0.78rem;">Awards &amp; Honors</h3>
+          <ul class="rec-list">
+            <li><span class="rec-year">2025</span><span><b>Early Career Physicist</b> — Institute of Physics, UK</span></li>
+            <li><span class="rec-year">2022</span><span><b>Outstanding Reviewer Award</b> — Institute of Physics, UK</span></li>
+            <li><span class="rec-year">—</span><span><b>Trusted Reviewer Status</b> — Institute of Physics, UK</span></li>
+            <li><span class="rec-year">—</span><span><b>Ph.D. Fellowship (HTRA Scheme)</b> — Government of India</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size:1rem; color:var(--paper-dim); font-weight:500; margin-bottom:12px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.05em; font-size:0.78rem;">Memberships &amp; Development</h3>
+          <div class="chips">
+            <span class="chip">Optica (OSA)</span>
+            <span class="chip">SPIE</span>
+            <span class="chip">IOP, UK</span>
+            <span class="chip">AAAS</span>
+          </div>
+          <ul class="rec-list" style="margin-top:18px;">
+            <li><span></span><span>Responsible Conduct of Research — CITI Program</span></li>
+            <li><span></span><span>Peer Review Excellence Training — Institute of Physics</span></li>
+            <li><span></span><span>Faculty Development Program — ACUE</span></li>
+            <li><span></span><span>Quantum Optics Certification — École Polytechnique</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING & MENTORING -->
+  <section id="teaching">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Teaching &amp; Mentoring</span>
+        <h2>Classroom to research bench</h2>
+      </div>
+      <div class="teach-grid reveal">
+        <div class="teach-card">
+          <h3>Teaching</h3>
+          <p>Engineering Physics (PH100) to 250+ undergraduates across disciplines, plus guest electromagnetism lectures to a 100-level class of 80 students. Consistently rated 95% satisfaction in student evaluations, with a focus on connecting theory to engineering practice.</p>
+        </div>
+        <div class="teach-card">
+          <h3>Mentoring</h3>
+          <ul>
+            <li>Mentored US high school students for the Junior Science and Humanities Symposium, 2022–2025.</li>
+            <li>"Pathonix" (ovarian cancer detection) — 1st place, NABT Professional Development Conference, 2024.</li>
+            <li>"3D Bioprinting for Cartilage Repair" student — admitted to Stanford Clinical Science Program, 2025.</li>
+            <li>Panel member, "Postdoc experiences and guidance for graduate students," University of Mississippi.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site" id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="reveal">
+        <span class="eyebrow">Get in Touch</span>
+        <h2>Let's talk optics, imaging, or opportunities.</h2>
+        <p style="color:var(--paper-dim); margin-top:16px; max-width:48ch;">Open to faculty, postdoctoral, and industry research roles in biomedical optics, OCT, and photonic instrumentation.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:phy10d001@iiitdm.ac.in">phy10d001@iiitdm.ac.in</a></li>
+          <li><span>Phone (India)</span><a href="tel:+919061389069">+91 90613 89069</a></li>
+          <li><span>Phone (USA)</span><a href="tel:+16623801653">+1 662 380 1653</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/dr-ramachandran-kasu-41b0166a/" id="linkedinLink" target="_blank" rel="noopener">Dr. Ramachandran Kasu</a></li>
+          <li><span>ORCID</span><a href="https://orcid.org/0000-0002-6774-5184" target="_blank" rel="noopener">0000-0002-6774-5184</a></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="portrait-tag" style="position:static; display:inline-block;">Currently at<br><b>EGIMT, AMTZ Campus · Visakhapatnam, India</b></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Ramachandran Kasu. All rights reserved.</span>
+      <span>Built with fiber, light, and a little interference.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navlinks = document.getElementById('navlinks');
+  navToggle.addEventListener('click', () => navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+  // Publications toggle
+  const pubToggle = document.getElementById('pubToggle');
+  const morePubs = document.getElementById('more-pubs');
+  pubToggle.addEventListener('click', () => {
+    const showing = morePubs.classList.toggle('show');
+    pubToggle.textContent = showing ? 'Show fewer publications ↑' : 'Show all 25 publications ↓';
+    pubToggle.setAttribute('aria-expanded', showing);
+  });
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
